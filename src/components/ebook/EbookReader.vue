@@ -5,18 +5,19 @@
 </template>
 
 <script>
-import Epub from 'epubjs'
-// import {ebookMixin} from '../../utils/mixin'
-import {mapGetters} from 'vuex'
+import Epub from 'epubjs';
+import { ebookMixin } from '../../utils/mixin';
+// import {mapGetters} from 'vuex'
 global.epub = Epub
     export default {
-        // mixins:{ebookMixin},
-          computed: {
-        ...mapGetters({
-         fileName:'fileName',
-         menuVisible:'menuVisible'
-    })
-    },
+        //这里mixins数组
+        mixins: [ebookMixin],
+    // computed: {
+    //     ...mapGetters({
+    //      fileName:'fileName',
+    //      menuVisible:'menuVisible'
+    // })
+    // },
         methods: {
             hdieMenuAndTitle(){
                this.$store.dispatch('setMenuVisible',false) 
