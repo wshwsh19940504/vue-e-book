@@ -1,17 +1,23 @@
 <template>
     <div class="ebook">
-我是ebook页
-<ebook-reader></ebook-reader>
- <router-view></router-view>
+
+        <ebook-title></ebook-title>
+        <ebook-reader></ebook-reader>
+c       <ebook-menu></ebook-menu>
+
     </div>
    
 </template>
 
 <script>
  import EbookReader from '../../components/ebook/EbookReader'
+ import EbookTitle from '../../components/ebook/EbookTitle'
+  import EbookMenu from '../../components/ebook/EbookMenu'
     export default {
         components:{
-            EbookReader
+            EbookReader,
+            EbookTitle,
+            EbookMenu
         }
     }
 </script>

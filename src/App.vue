@@ -18,6 +18,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #app{
+  //占满全屏
   width:100%;
   height:100%;
   overflow:hidden;
